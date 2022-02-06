@@ -213,12 +213,9 @@ end
 end
 end)
 misc:NewButton("Anti-Afk", "Makes it so you don't get kicked", function()
-    local vu = game:GetService("VirtualUser")
-game:GetService("Players").LocalPlayer.Idled:connect(function()
-   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-   wait(1)
-   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-end)
+    for i,v in pairs(getconnections(game.Players.LocalPlayer.Idled)) do
+v:Disable()
+end
 end)
 auto:NewButton("Auto Delete Stone", "Removes stone from inventory", function()
     while wait() do
