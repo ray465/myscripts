@@ -14,13 +14,13 @@ local char = game.Players.LocalPlayer.Character
 
 for i,v in pairs(path:GetChildren()) do
    char.HumanoidRootPart.CFrame = v.CFrame
-   task.wait(1)
+   task.wait(0.5)
    fireproximityprompt(v.ProximityPrompt)
 end
 
 path.ChildAdded:Connect(function(v)
    char.HumanoidRootPart.CFrame = v.CFrame
-   task.wait(1)
+   task.wait(0.5)
    fireproximityprompt(v.ProximityPrompt)    
 end)
 end
@@ -32,13 +32,13 @@ local char = game.Players.LocalPlayer.Character
 
 for i,v in pairs(path:GetChildren()) do
    char.HumanoidRootPart.CFrame = v.CFrame
-   task.wait(1)
+   task.wait(0.5)
    fireproximityprompt(v.ProximityPrompt)
 end
 
 path.ChildAdded:Connect(function(v)
    char.HumanoidRootPart.CFrame = v.CFrame
-   task.wait(1)
+   task.wait(0.5)
    fireproximityprompt(v.ProximityPrompt)    
 end)
 end
