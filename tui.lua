@@ -1,13 +1,13 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("TUI GUI", "Ocean")
 
-local collecting = Window:NewTab("Collecting")
-local auto = Window:NewTab("Auto")
+local farming = Window:NewTab("Farming")
+local inventory = Window:NewTab("Inventory")
 local misc = Window:NewTab("Misc")
-local collecting = collecting:NewSection("Collectors")
-local auto = auto:NewSection("Autos")
+local farming = farming:NewSection("Main")
+local inventory = inventory:NewSection("Clearing")
 local misc = misc:NewSection("Misc")
-collecting:NewButton("Collect Chests", "Gets every chest on the map", function()
+farming:NewButton("Collect Chests", "Gets every chest on the map", function()
 while wait() do
 local path = workspace.chests
 local char = game.Players.LocalPlayer.Character
@@ -25,7 +25,7 @@ path.ChildAdded:Connect(function(v)
 end)
 end
 end)
-collecting:NewButton("Collect Other Objects", "Collects Other Items", function()
+farming:NewButton("Collect Other Objects", "Collects Other Items", function()
     while wait() do
 local path = workspace.other
 local char = game.Players.LocalPlayer.Character
@@ -158,7 +158,7 @@ end
 _G.FullBrightExecuted = true
 _G.FullBrightEnabled = not _G.FullBrightEnabled
 end)
-auto:NewButton("Auto Delete Oil", "Removes oil from inventory", function()
+inventory:NewButton("Auto Delete Oil", "Removes oil from inventory", function()
     while wait() do
 for _, v in pairs(game.Players.LocalPlayer.Backpack:GetDescendants()) do
 if v:IsA("Tool") and v.Name == "Oil Cup" then
@@ -167,7 +167,7 @@ end
 end
 end
 end)
-auto:NewButton("Auto Delete Blood", "Removes blood from inventory", function()
+inventory:NewButton("Auto Delete Blood", "Removes blood from inventory", function()
     while wait() do
 for _, v in pairs(game.Players.LocalPlayer.Backpack:GetDescendants()) do
 if v:IsA("Tool") and v.Name == "Blood Cup" then
@@ -176,7 +176,7 @@ end
 end
 end
 end)
-auto:NewButton("Auto Delete Wood", "Removes wood from inventory", function()
+inventory:NewButton("Auto Delete Wood", "Removes wood from inventory", function()
     while wait() do
 for _, v in pairs(game.Players.LocalPlayer.Backpack:GetDescendants()) do
 if v:IsA("Tool") and v.Name == "Wood" then
@@ -185,7 +185,7 @@ end
 end
 end
 end)
-auto:NewButton("Auto Delete Gold", "Removes gold from inventory", function()
+inventory:NewButton("Auto Delete Gold", "Removes gold from inventory", function()
     while wait() do
 for _, v in pairs(game.Players.LocalPlayer.Backpack:GetDescendants()) do
 if v:IsA("Tool") and v.Name == "Gold" then
@@ -194,7 +194,7 @@ end
 end
 end
 end)
-auto:NewButton("Auto Delete Metal", "Removes metal from inventory", function()
+inventory:NewButton("Auto Delete Metal", "Removes metal from inventory", function()
     while wait() do
 for _, v in pairs(game.Players.LocalPlayer.Backpack:GetDescendants()) do
 if v:IsA("Tool") and v.Name == "Metal" then
@@ -203,7 +203,7 @@ end
 end
 end
 end)
-auto:NewButton("Auto Delete Rope", "Removes rope from inventory", function()
+inventory:NewButton("Auto Delete Rope", "Removes rope from inventory", function()
     while wait() do
 for _, v in pairs(game.Players.LocalPlayer.Backpack:GetDescendants()) do
 if v:IsA("Tool") and v.Name == "Rope" then
@@ -217,7 +217,7 @@ misc:NewButton("Anti-Afk", "Makes it so you don't get kicked", function()
 v:Disable()
 end
 end)
-auto:NewButton("Auto Delete Stone", "Removes stone from inventory", function()
+inventory:NewButton("Auto Delete Stone", "Removes stone from inventory", function()
     while wait() do
 for _, v in pairs(game.Players.LocalPlayer.Backpack:GetDescendants()) do
 if v:IsA("Tool") and v.Name == "Stone" then
@@ -226,7 +226,7 @@ end
 end
 end
 end)
-misc:NewButton("No Chest Grab Wait", "Grab Chests Instantly", function()
+farming:NewButton("No Chest Grab Wait", "Grab Chests Instantly", function()
    while wait() do
 for i, v in pairs(workspace:GetDescendants()) do
 if v.ClassName == "ProximityPrompt" then
@@ -238,7 +238,7 @@ end)
 misc:NewButton("Infinite Yield", "Useful CMDs", function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
-auto:NewButton("Auto Delete Rusty Metal", "Removes rusty metal from inventory", function()
+inventory:NewButton("Auto Delete Rusty Metal", "Removes rusty metal from inventory", function()
     while wait() do
 for _, v in pairs(game.Players.LocalPlayer.Backpack:GetDescendants()) do
 if v:IsA("Tool") and v.Name == "Rusty Metal" then
