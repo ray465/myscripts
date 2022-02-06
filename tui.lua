@@ -254,7 +254,7 @@ local me = game:service'Players'.LocalPlayer
 me.Character.Humanoid:EquipTool(me.Backpack:FindFirstChild(toolName))
 end
 end)
-farming:NewButton("Turn on opening chests", "opens chests", function()
+farming:NewButton("Turn on opening chests", "opens chests, works tabbed out", function()
     local vu = game:GetService("VirtualUser")
 _G.autoclick = true
 while _G.autoclick do
@@ -263,7 +263,7 @@ wait(0.1)
 vu:Button1Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
 end
 end)
-farming:NewButton("Turn off opening chests", "opens chests", function()
+farming:NewButton("Turn off chests opener", "turns off chest opener, works tabbed out", function()
     local vu = game:GetService("VirtualUser")
 _G.autoclick = false
 while _G.autoclick do
