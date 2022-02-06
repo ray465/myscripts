@@ -247,3 +247,6 @@ end
 end
 end
 end)
+misc:NewKeybind("UI Toggle", "toggles ui on and off", Enum.KeyCode.=, function()
+	Library:ToggleUI()
+end)
