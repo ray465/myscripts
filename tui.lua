@@ -241,3 +241,12 @@ end)
 misc:NewButton("Infinite Yield", "Useful CMDs", function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
+auto:NewButton("Auto Delete Rusty Metal", "Removes rusty metal from inventory", function()
+    while wait() do
+for _, v in pairs(game.Players.LocalPlayer.Backpack:GetDescendants()) do
+if v:IsA("Tool") and v.Name == "Rusty Metal" then
+v:Destroy()
+end
+end
+end
+end)
